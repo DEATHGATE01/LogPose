@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Navigation Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="logo.svg" alt="Logo" class="header-logo">
+            <h1>LogPose</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <section id="home" class="hero-section">
+        <div class="hero-content" data-aos="fade-in">
+            <div class="ship-background">
+                <h1>Smart Navigation for the Indian Ocean</h1>
+                <p>Navigate Smartly, Sail Safely</p>
+                <br>
+                <br>
+                <a href="#services" class="btn">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section" data-aos="fade-up">
+        <div class="about-box">
+            <h2>About Us</h2>
+            <p>We specialize in developing sophisticated algorithms that optimize shipping routes across the Indian Ocean. Our focus is on reducing fuel consumption and ensuring safe voyages by utilizing real-time weather data. This innovative solution supports the Indian shipping industry by enhancing route efficiency and minimizing operational risks.</p>
+        </div>
+    </section>
+
+    <section id="revolutionize" class="revolutionize-section" data-aos="fade-left">
+        <div class="revolutionize-box">
+            <h2>Revolutionize Your Maritime Experience</h2>
+            <p>Efficiency Meets Safety</p>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-cards-container">
+            <div class="service-card">
+                <img src="route.jpg" alt="Service 1">
+                <h3>Route Optimization</h3>
+                <p>Minimize fuel consumption and time with AI-powered route planning.</p>
+            </div>
+            <div class="service-card">
+                <img src="real.jpg" alt="Service 2">
+                <h3>Real-Time Weather Integration</h3>
+                <p>Navigate safely with up-to-date weather data and forecasts.</p>
+            </div>
+            <div class="service-card">
+                <img src="sol.jpg" alt="Service 3">
+                <h3>Scalable Solutions</h3>
+                <p>Our solution is designed to be versatile and scalable to include additional parameters, making it adaptable for different ship types and conditions.</p>
+            </div>
+        </div>
+        <button class="navigation-center-btn" onclick="window.open('http://localhost:8501', '_blank');">Navigation Centre</button>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial">
+                <img src="maritime" alt="Client 1" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>"LogPose has revolutionized our fleet's efficiency. The route optimization feature alone saved us thousands!"</p>
+                    <h4>- Maritime Corp</h4>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="oceanic.jpg" alt="Client 2" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>"An excellent service with outstanding support. The weather integration has been a game-changer for us."</p>
+                    <h4>- Oceanic Ventures</h4>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="naut.png" alt="Client 3" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>"The scalability of LogPose's solution allowed us to adapt it to our specific needs seamlessly."</p>
+                    <h4>- Nautical Inc.</h4>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="ent.png" alt="Client 4" class="testimonial-img">
+                <div class="testimonial-content">
+                    <p>"Incredible support and innovative features. Our operations are smoother than ever!"</p>
+                    <h4>- Voyage Enterprises</h4>
+                    <div class="testimonial-stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control carousel-control-prev">&#x2190;</button>
+        <button class="carousel-control carousel-control-next">&#x2192;</button>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form-container">
+            <form action="/submit" method="POST" id="contactForm">
+                <div class="contact-form-row">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="phone" placeholder="Your Phone">
+                </div>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="map" class="map-section">
+        <h2>Our Coverage Area</h2>
+        <div id="mapid" style="height: 400px;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LogPose. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
